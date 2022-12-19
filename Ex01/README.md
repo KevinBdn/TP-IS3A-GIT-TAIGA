@@ -43,6 +43,8 @@ Exercice 1
 
 	1. Créer repo projet Github "TP-GIT-TAIGA" publique avec un `README.md` (cocher `Add a README file`)
 	
+	![](rsc/Github-1.png) 
+	
 	2. En local:
 		- Git clone
 		
