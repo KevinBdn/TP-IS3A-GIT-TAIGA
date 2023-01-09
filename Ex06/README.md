@@ -2,11 +2,11 @@ Exercice 6
 ===
 
 ### Objectifs
---- 
+---
 
-* **GIT**: Accepter la pull-request puis mette à jour sa copie locale
+* **GIT**: Accepter la pull-request puis mettre à jour sa copie locale
 
----	
+---
 ### Consignes
 
 
@@ -17,7 +17,7 @@ Exercice 6
 
 			$ git checkout main
 			$ git pull origin main
-			
+		
 	2. Maj `devel` local/online
 
 			$ git checkout devel
