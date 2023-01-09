@@ -6,8 +6,6 @@ Exercice 12
 
 * **GIT**: Utiliser la commande *amend*, Regrouper ses commits
 
-  
-
 ---
 ### Consignes
 

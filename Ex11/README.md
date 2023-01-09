@@ -5,7 +5,6 @@ Exercice 11
 ---
 
 * **GIT**: Utiliser la commande *rebase*, voir la différence avec *merge*, utiliser la commande *reset*, *git log* et *git reflog*
-* **TAIGA** : ajouter des documents à une tâche
 
 ---
 ### Consignes
@@ -15,9 +14,9 @@ Exercice 11
 
   1. Se positionner sur la branche *devel*
   
-     ```bash
+  ```bash
      git checkout devel
-     ```
+  ```
   
 	   
   
@@ -28,13 +27,13 @@ Exercice 11
        ...
     ```
 	3. Faire un commit 
-  ```bash
+    ```bash
   git commit -m "Ajout de mon rôle GM"
-  ```
+    ```
   
   4. Ajouter dans le README les infos si d'autres veulent contribuer
   
-  ```bash
+    ```bash
    nano README.md
    	...
    # Copier coller : 
@@ -44,117 +43,126 @@ Exercice 11
    #            3. Développer vos fonctionnalités
    #            4. Intégrer votre branche devel à votre branche main (qui devra être à jour vis à vis du répertoire upstream)
    #            5. Une fois les conflits résolus, faire une Pull-request
-  ```
+    ```
   
   5. Faire un commit
     ```bash
     git commit -m "Ajout des consignes pour contribuer"
     ```
 
-​	6. Mettre à jour sa branche main et son répertoire distant
+ 6. Mettre à jour sa branche main et son répertoire distant
 
-- **[PO]**
+    ```bash
+    git push origin devel
+    git checkout main
+    git pull origin devel
+    git push origin main
+    ```
 
-  1. Créer le *sprint 7*. Y associer les tâches des exercices 11 et 12.
 
-  2.  Se mettre sur sa branche *devel*
+* **[PO]**
+
+  1. Se mettre sur sa branche *devel*
 
      ```bash
      git checkout devel
      ```
-
-  3. Ajouter dans le fichier *Members.md* la fonction **PO** devant son nom
+  
+  2. Ajouter dans le fichier *Members.md* la fonction **PO** devant son nom
 
      ```bash
      nano Team/Members.md
         ...
      ```
-
-  4. Faire un commit 
+  
+  3. Faire un commit 
 
      ```bash
      git commit -m "Role PO ajouté"
      git push origin devel 
      ```
 
-- **Observer Merge vs Rebase**
+## **Observer Merge vs Rebase**
 
-  1. Sur le répertoire du **PO** créer une nouvelle branche *test* [le **GM** est présent et observe]
+1. Sur le répertoire du **PO** créer une nouvelle branche *test* [le **GM** est présent et observe]
 
-  2. Faire un **merge** sur la branche et résoudre les confit éventuel
+    ```bash
+   git branch test
+   ```
 
-     ```bash
-     git checkout test
-     git pull upstream main # fait le merge ;)
-     # si besoin résoudre les conflits
-     ```
+2. Faire un **merge** sur la branche et résoudre les confits éventuels
 
-  3. Observer les différents log sous forme d'arbre
+    ```bash
+   git checkout test
+   git pull upstream main # fait le merge ;)
+   # si besoin résoudre les conflits
+   ```
 
-     ```bash
-     git log --graph --oneline --all
-     ```
+3. Observer les différents log sous forme d'arbre
 
-  4. Faire une capture d'écran et l'associer à la tache sous TAIGA dans la section *Attachments*
+    ```bash
+   git log --graph --oneline --all
+   ```
 
-  5. On souhaite maintenant revenir en arrière, avant le *rebase* 
+4. Faire une capture d'écran et l'enregistrer. Lui donner un nom (ex. picture_git_merge.png) !
 
-     ```bash
-     git reflog # pour récuperer la référence des opérations faites sur le répertoire
-     # Identifier celle correspondant au rebase
-     git reset --HARD <ref>
-     ```
+5. On souhaite maintenant revenir en arrière, avant le *rebase* 
 
-  6. Faire un **rebase** sur la branche et résoudre les confit éventuel
+    ```bash
+   git reflog # pour récuperer la référence des opérations faites sur le répertoire
+   # Identifier la référence correspondant à la dernière action avant le merge
+   git reset --HARD <ref> # permet de revenir à <ref> en supprimant toutes les modifications qui avaient étés faites
+   ```
 
-     ```bash
-     git checkout test
-     git pull --rebase upstream main
-     # Se laisser guider par les informations de la commande s'il y ades conflits à résoudre
-     ```
+6. Faire un **rebase** sur la branche et résoudre les confit éventuel
 
-  7. Observer les différents log sous forme d'arbre
+    ```bash
+   git checkout test
+   git pull --rebase upstream main
+   # Se laisser guider par les informations de la commande s'il y ades conflits à résoudre
+   ```
 
-     ```bash
-     git log --graph --oneline --all
-     ```
+7. Observer les différents log sous forme d'arbre
 
-  8. Faire une capture d'écran et l'associer à la tache sous TAIGA dans la section *Attachments*
+    ```bash
+   git log --graph --oneline --all
+   ```
 
-  9. Mettre à jour sa branche test
+8. Faire une capture d'écran et  l'enregistrer. Lui donner un nom (ex. picture_git_rebase.png) !
 
-     ```bash
-     git push origin test
-     ```
+9. Mettre à jour sa branche test
 
-  10. Mettre à jour sa branche main
+    ```bash
+   git push origin test
+   ```
 
-      ```bash
-      git checkout main
-      git pull origin test
-      git push origin main 
-      ```
+10. Mettre à jour sa branche main
 
-  11. Observer les captures d'écran : 
+    ```bash
+    git checkout main
+    git pull origin test
+    git push origin main 
+    ```
 
-      Comment sont organisés les commits de la première capture d'écran ("merge") et ceux de la deuxième ?
+11. Observer les captures d'écran : 
 
-  ​    
+    Comment sont organisés les commits de la première capture d'écran ("merge") et ceux de la deuxième ("rebase") ?
 
-  ## A retenir 
+​    
 
-  > La commande **merge** écrit un commit de merge au dessus des commits locaux ajoutés
-  >
-  > La commande **rebase** réécrit l'historique et réapplique ensuite les commits locaux de manière chronologique
-  >
-  > Ainsi lorsqu'on travail sur **un fork, ou sur des branches de développement**,  il convient mieux d'utiliser la commande **rebase** pour toujours garder un historique cohérent avec la branche du répertoire principal et ne as ajouter de commit de merge**
-  >
-  > En revanche sur **la branche main du répertoire principal**, au contraire il **FAUT IMPÉRATIVEMENT** utiliser la commande  *merge* pour ajouter les fonctionnalités des Pull-Request. Sinon, avec *rebase* vous réécrirez un historique complètement nouveau qui sera incompatible avec vos autres branches et autres forks qui compliquera GRANDEMENT leur participation.
-  
-  > La commande **git log** permet de voir l'historique des **commits**
-  >
-  > La commande **git reflog** permet de voir l'historique des commandes
-  >
-  > La commande **git reset [réference]**  permet revenir en arrière à la référence choisie. Si elle est associée à *--hard* les modifications apporté aux différents éléments du fichiers seront supprimées. Sans cette option, les modifications resteront.
-  
-  
+## A retenir 
+
+> La commande **merge** écrit un commit de merge au dessus des commits locaux ajoutés
+>
+> La commande **rebase** réécrit l'historique et réapplique ensuite les commits locaux de manière chronologique
+>
+> Ainsi lorsqu'on travail sur **un fork, ou sur des branches de développement**,  il convient mieux d'utiliser la commande **rebase** pour toujours garder un historique cohérent avec la branche du répertoire principal et ne as ajouter de commit de merge**
+>
+> En revanche sur **la branche main du répertoire principal**, au contraire il **FAUT IMPÉRATIVEMENT** utiliser la commande  *merge* pour ajouter les fonctionnalités des Pull-Request. Sinon, avec *rebase* vous réécrirez un historique complètement nouveau qui sera incompatible avec vos autres branches et autres forks qui compliquera GRANDEMENT leur participation.
+
+> La commande **git log** permet de voir l'historique des **commits**
+>
+> La commande **git reflog** permet de voir l'historique des commandes
+>
+> La commande **git reset [réference]**  permet revenir en arrière à la référence choisie. Si elle est associée à *--hard* les modifications apporté aux différents éléments du fichiers seront supprimées. Sans cette option, les modifications resteront.
+
