@@ -36,7 +36,7 @@ Les fichiers `verif_exoXXX.sh` doivent être exécutés depuis votre repo local:
 
 	$ cd TP-GIT-TAIGA
 	$ ../TP-IS3A-GIT-TAIGA/ExXX/verif_exoXX.sh
-	
+
 
 ### Gestion sous TAIGA du projet
 ---
@@ -64,7 +64,6 @@ Sous **TAIGA** 6 *Sprints* seront à créer. Chaque *Sprint* rassemble un ou plu
 	* [Ex02](Ex02/README.md)
 		
 		* **[PO]** Forker un repo **Github** et configurer le projet en local
-
 * **SPRINT2** - Gestion des branches et des fusions
 
 	* [Ex03](Ex03/README.md)
@@ -75,7 +74,6 @@ Sous **TAIGA** 6 *Sprints* seront à créer. Chaque *Sprint* rassemble un ou plu
 	* [Ex04](Ex04/README.md)
 	
 		* **[PO & GM]** Fusionner des branches
-
 * **SPRINT3** - Gestion des conflits et des *Pull Request*
 
 	* [Ex05](Ex05/README.md)
@@ -86,13 +84,11 @@ Sous **TAIGA** 6 *Sprints* seront à créer. Chaque *Sprint* rassemble un ou plu
 	* [Ex06](Ex06/README.md)
 	
 		* **[GM]** Accepter une *Pull Request*
-
 * **SPRINT4** - Utilisation du `.gitignore`
 
 	* [Ex07](Ex07/README.md)
 	
 		* **[PO/GM]** Créer et configurer un `.gitignore`
-
 * **SPRINT5** - Gestion des issues
 
 	* [Ex08](Ex08/README.md)
@@ -100,14 +96,18 @@ Sous **TAIGA** 6 *Sprints* seront à créer. Chaque *Sprint* rassemble un ou plu
 		* **[PO]** Relier **Github** à **TAIGA**
 		* **[PO]** Créer une issue
 		* **[GM]** Résoudre une issue
-
 * **SPRINT6** - Création d'une branche à partir d'un *Commit*
 
 	* [Ex09](Ex09/README.md)
 	
 		* **[PO & GM]** Utilisation des *tags*
 		* **[PO & GM]** Création d'une branche à partir d'un *Commit*
-	
 	* [Ex10](Ex10/README.md)
 	
 		* **[PO & GM]** Supression d'une branche
+* **SPRINT7**-Gestion de l'historique git
+  * [Ex11](Ex11/README.md)
+    * **[PO & GM]** Différences entre *merge* et *rebase*
+  * [Ex12](Ex12/README.md)
+    * **[PO & GM]** Modification du dernier *commits* et *squash*
+
