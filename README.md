@@ -12,8 +12,9 @@ Durant le projet de l'UV 5.8, ce repertoire **Github** constitura le livrable qu
 
 
 Dans les exercices les actions à réaliser peuvent être différentes pour le **PO** et le **GM**. 
-Dans chaque dossier **ExXX** les consignes sont décrites dans le fichier `REAMDE.md`. Une fois l'exercice réalisé il faut lancer le script `verif_exoXX.sh` pour savoir si l'exercice a bien été réalisé. Dans le cas où un message d'erreur apparait, faites appel à un encadrant.
+Dans chaque dossier **ExXX** les consignes sont décrites dans le fichier `REAMDE.md`. Une fois l'exercice réalisé il faut lancer le script `verif_exoXX.sh` (si présent) pour savoir si l'exercice a bien été réalisé. Dans le cas où un message d'erreur apparait, faites appel à un encadrant.
 
+Le protocole `HTTPS` est privilégié par rapport au protocole `SSH` pour la gestion des répertoires Github. Certains scripts `verif_exoXX.sh` et/ou consignes pourraient ne pas être totalement fonctionnels si le protocole `SSH` est utilisé.
 
 ### Mise en place du TP
 ---
@@ -41,7 +42,7 @@ Les fichiers `verif_exoXXX.sh` doivent être exécutés depuis votre repo local:
 ### Gestion sous TAIGA du projet
 ---
 
-Sous **TAIGA** 6 *Sprints* seront à créer. Chaque *Sprint* rassemble un ou plusieurs exercices. Chaque exercice à plusieurs objectifs qui sont décrits ci-dessous. Un objectif fera office de *User Story*. Pour chaque *User Story* il faudra définir les sous-tâches adaptées qui correspondent aux étapes de chaque exercice. Suivant la personne a qui ces étapes se réfère il faudra associer ces sous-tâches aux membres du projet. Chaque membre devra alors faire évoluer ses tâches afin de clore la *User Story*. 
+Sous **TAIGA** 7 *Sprints* seront à créer. Chaque *Sprint* rassemble un ou plusieurs exercices. Chaque exercice à plusieurs objectifs qui sont décrits ci-dessous. Un objectif fera office de *User Story*. Pour chaque *User Story* il faudra définir les sous-tâches adaptées qui correspondent aux étapes de chaque exercice. Suivant la personne a qui ces étapes se réfère il faudra associer ces sous-tâches aux membres du projet. Chaque membre devra alors faire évoluer ses tâches afin de clore la *User Story*. 
 
 | Sprint | Exercices | 
 | - |-|
@@ -105,9 +106,12 @@ Sous **TAIGA** 6 *Sprints* seront à créer. Chaque *Sprint* rassemble un ou plu
 	* [Ex10](Ex10/README.md)
 	
 		* **[PO & GM]** Supression d'une branche
-* **SPRINT7**-Gestion de l'historique git
-  * [Ex11](Ex11/README.md)
-    * **[PO & GM]** Différences entre *merge* et *rebase*
-  * [Ex12](Ex12/README.md)
-    * **[PO & GM]** Modification du dernier *commits* et *squash*
+        
+* **SPRINT7** - Gestion de l'historique git
+  
+    * [Ex11](Ex11/README.md)
+        * **[PO & GM]** Différences entre *merge* et *rebase*
+        
+    * [Ex12](Ex12/README.md)
+        * **[PO & GM]** Modification du dernier *commits* et *squash*
 
