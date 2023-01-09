@@ -1,0 +1,4 @@
+Pour contribuer à ce projet :
+        1. Fork le projet
+        2. Créer une branche devel
+        3. Développer vos fonctionnalités
