@@ -18,6 +18,8 @@ ok()
 GIT_ORIGIN_URL=$(git remote get-url origin)
 MEMBER_URL_MAIN=$(echo $GIT_ORIGIN_URL | sed 's/github/raw.githubusercontent/g')/main/Team/Members.md
 MEMBER_URL_DEVEL=$(echo $GIT_ORIGIN_URL | sed 's/github/raw.githubusercontent/g')/devel/Team/Members.md
+rm -f /tmp/outMain
+rm -f /tmp/outDevel
 wget -q $MEMBER_URL_MAIN -O /tmp/outMain
 wget -q $MEMBER_URL_DEVEL -O /tmp/outDevel
 git checkout devel

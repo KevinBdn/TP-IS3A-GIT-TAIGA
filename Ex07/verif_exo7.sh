@@ -17,7 +17,7 @@ ok()
 
 GIT_UPSTREAM_URL=$(cat README.md | grep -i "Git-url" | sed 's/.*(\(.*\))/\1/')
 GITIGNORE_URL_MAIN=$(echo $GIT_UPSTREAM_URL | sed 's/github/raw.githubusercontent/g')/main/.gitignore
-
+rm -f /tmp/out
 wget -q $GITIGNORE_URL_MAIN -O /tmp/out
 git checkout devel
 diff -q .gitignore /tmp/out
@@ -44,13 +44,13 @@ then
 fi
 if [[ $RSLT_MAIN -gt 0 ]]
     then
-    echo $(ko) "La branche 'main' n'est pas à jour avec le repo Github"
+    echo $(ko) "La branche 'main' n'est pas à jour avec le repo Github upstream"
     exit 1
 fi
 
 if [[ $RSLT_DEVEL -gt 0 ]]
     then
-    echo $(ko) "La branche 'devel' n'est pas à jour avec le repo Github"
+    echo $(ko) "La branche 'devel' n'est pas à jour avec le repo Github upstream"
     exit 1
 fi
 

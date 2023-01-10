@@ -29,6 +29,7 @@ then
         echo $(ko) "La branche 'devel' n'est pas à jour sur le repo Github d'origine"
         exit 1
     fi
+    rm -f /tmp/out
     wget -q $MEMBER_URL -O /tmp/out
     git checkout devel
     diff -q Team/Members.md /tmp/out

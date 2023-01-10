@@ -23,6 +23,11 @@ MEMBER_URL_OR_DEVEL=$(echo $GIT_URL_OR | sed 's/github/raw.githubusercontent/g')
 MEMBER_URL_UP_MAIN=$(echo $GIT_URL_UP | sed 's/github/raw.githubusercontent/g')/main/Team/Members.md
 MEMBER_URL_UP_DEVEL=$(echo $GIT_URL_UP | sed 's/github/raw.githubusercontent/g')/devel/Team/Members.md
 
+rm -f /tmp/outMainOr
+rm -f /tmp/outDevelOr
+rm -f /tmp/outMainUp
+rm -f /tmp/outDevelUp
+
 wget -q $MEMBER_URL_OR_MAIN -O /tmp/outMainOr
 wget -q $MEMBER_URL_OR_DEVEL -O /tmp/outDevelOr
 wget -q $MEMBER_URL_UP_MAIN -O /tmp/outMainUp
