@@ -35,6 +35,9 @@ blockquote:after{
 
 <!-- _class: lead -->
 # Git and Github 
+Nathan Fourniol
+Kevin Bedin 
+
 ---
 # Vous avez dit Git ?
 - **Version Control System (VCS)** (crée par Linus Thorvald) 
