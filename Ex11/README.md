@@ -18,12 +18,12 @@ Exercice 11
   
     2. Ajouter son rôle devant son nom dans le fichier `Members.md`
 
-		    $ nano Team/Members.md
-		    ...
+            $ nano Team/Members.md
+            ...
 	
-	3. Faire un commit 
+    3. Faire un commit 
 	
-  		    $ git commit -m "GM status added"
+            $ git commit -m "GM status added"
   
     4. Ajouter dans le `README.md` les infos si d'autres veulent contribuer
 
@@ -52,14 +52,14 @@ Exercice 11
 
 * **[PO]**
 
-    1. Se mettre sur sa branche *devel*
+    1. Se mettre sur sa branche `devel`
 
             $ git checkout devel
 
   
     2. Ajouter dans le fichier `Members.md` la fonction **PO** devant son nom
 
-           $ nano Team/Members.md
+            $ nano Team/Members.md
             ...
      
   
@@ -77,9 +77,9 @@ Exercice 11
 
 2. Faire un **merge** sur la branche et résoudre les confits éventuels
 
-       $ git checkout test
-       $ git pull upstream main # fait le merge ;)
-       # si besoin résoudre les conflits
+        $ git checkout test
+        $ git pull upstream main # fait le merge ;)
+        # si besoin résoudre les conflits
 
 
 3. Observer les différents log sous forme d'arbre

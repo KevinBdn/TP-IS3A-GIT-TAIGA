@@ -16,7 +16,7 @@ Exercice 12
   
             $ git checkout devel
   
-	2. Supprimer les lignes pour contribuer à ce projer du fichier README.md  
+	2. Supprimer les lignes pour contribuer à ce projer du fichier  `README.md`
 
         	 $ nano README.md
 	         ...
@@ -61,7 +61,7 @@ Exercice 12
             # Enregister le fichier. Un nouveau fichier de commit va s'ouvrir
             # Ajouter le message puis enregistrer
   
-   5. Regarder les logs maintenant
+    5. Regarder les logs maintenant
 
             $ git log --oneline
   

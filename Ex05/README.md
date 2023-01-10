@@ -32,7 +32,7 @@ Le mieux est de gérer le conflit avant de faire une *Pull-Request*
 	2. Branch `main` à mettre à jour à partir de la branche `devel`
 
 			$ git checkout main
-			$ git pull origin devel
+			$ git pull origin devel # ou $ git merge devel
 			$ git push origin main
 
 	3. Faire pull-request depuis Github `main` **PO** vers `main` **GM**
