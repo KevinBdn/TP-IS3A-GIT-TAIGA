@@ -115,3 +115,11 @@ Sous **TAIGA** 7 *Sprints* seront à créer. Chaque *Sprint* rassemble un ou plu
     * [Ex12](Ex12/README.md)
         * **[PO & GM]** Modification du dernier *commits* et *squash*
 
+### Informations utiles
+---
+
+Une présentation générale de **Git**/**Github** est disponible dans dossier `Presentation/` au format [Markdown](Presentation/presentation.md) et [PDF](Presentation/presentation.pdf).  
+
+Vous trouvez également dans ce dossier une [CheatSheet](Presentation/git_cheatsheet.md).
+
+Si vous observez des anomalies dans ce TP n'hésitez pas à nous en faire part en utilisant vos connaissances **Git** au travers d'*issues* et *Pull Requests* ! 😉
