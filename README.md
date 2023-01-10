@@ -6,7 +6,7 @@ Ce TP a pour objectifs d'apprendre les bonnes pratiques **Git** ainsi que de pre
 ### Consignes 
 ---
 
-Il est composé de 10 mini-exercices. Les exercices se font par groupe de deux (ou trois si nombre d'élèves impair).  
+Il est composé de 12 mini-exercices. Les exercices se font par groupe de deux (ou trois si nombre d'élèves impair).  
 Dans chaque groupe un *Git master* (**GM**) et un (ou deux si groupe de trois) *Product Owner* (**PO**) doivent être définis. Le **PO** a pour rôle de gérer le projet **TAIGA** alors que le **GM** gérera le répertoire **Github** "maître" du projet.  
 Durant le projet de l'UV 5.8, ce repertoire **Github** constitura le livrable qui sera fourni au client à chaque *Sprint*, il doit donc tout le temps être fonctionnel.
 
