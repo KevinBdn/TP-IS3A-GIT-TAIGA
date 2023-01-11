@@ -18,7 +18,7 @@ Exercice 2
 		
 			$ git clone https://github.com/XXX
 		
-	3. Parametrer le git remote `upstream`
+	3. Parametrer le git remote `upstream` en mettant l'url du repo *Git* du **GM**
 	
 			$ cd TP-GIT-TAIGA/
 			$ git remote get-url origin

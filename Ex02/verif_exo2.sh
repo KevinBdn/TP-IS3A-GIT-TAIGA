@@ -22,8 +22,8 @@ ok()
 if [ -e README.md ]
 then
     GIT_UPSTREAM_URL=$(cat README.md | grep -i "Git-url" | sed 's/.*(\(.*\))/\1/')
-
-    if [ $(git remote get-url upstream) == $GIT_UPSTREAM_URL ]
+    echo $GIT_UPSTREAM_URL
+    if [ $(git remote get-url upstream | sed 's/\.git//g') == $GIT_UPSTREAM_URL ]
     then
         echo $(ok) "Exercice 2 terminé"
         exit 1
