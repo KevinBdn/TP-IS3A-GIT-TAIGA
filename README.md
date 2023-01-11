@@ -52,6 +52,7 @@ Sous **TAIGA** 7 *Sprints* seront à créer. Chaque *Sprint* rassemble un ou plu
 | 4 | [Ex07](Ex07/README.md) |
 | 5 | [Ex08](Ex08/README.md) |
 | 6 | [Ex09](Ex09/README.md), [Ex10](Ex10/README.md) |
+| 7 | [Ex11](Ex11/README.md), [Ex12](Ex12/README.md) |
 
 * **SPRINT1** - Mise en place du projet
 
