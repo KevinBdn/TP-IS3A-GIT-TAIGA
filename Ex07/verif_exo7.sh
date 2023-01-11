@@ -16,7 +16,7 @@ ok()
 
 
 GIT_UPSTREAM_URL=$(cat README.md | grep -i "Git-url" | sed 's/.*(\(.*\))/\1/')
-GITIGNORE_URL_MAIN=$(echo $GIT_UPSTREAM_URL | sed 's/github/raw.githubusercontent/g')/main/.gitignore
+GITIGNORE_URL_MAIN=$(echo $GIT_UPSTREAM_URL | sed 's/\.git//g;s/github/raw.githubusercontent/g')/main/.gitignore
 rm -f /tmp/out
 wget -q $GITIGNORE_URL_MAIN -O /tmp/out
 git checkout devel

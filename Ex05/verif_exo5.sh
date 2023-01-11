@@ -16,9 +16,9 @@ ok()
 
 
 GIT_UPSTREAM_URL=$(cat README.md | grep -i "Git-url" | sed 's/.*(\(.*\))/\1/')
-MEMBER_URL_UPSTREAM_MAIN=$(echo $GIT_UPSTREAM_URL | sed 's/github/raw.githubusercontent/g')/main/Team/Members.md
+MEMBER_URL_UPSTREAM_MAIN=$(echo $GIT_UPSTREAM_URL | sed 's/\.git//g;s/github/raw.githubusercontent/g')/main/Team/Members.md
 GIT_ORIGIN_URL=$(git remote get-url origin)
-MEMBER_URL_ORIGIN_MAIN=$(echo $GIT_ORIGIN_URL | sed 's/github/raw.githubusercontent/g')/main/Team/Members.md
+MEMBER_URL_ORIGIN_MAIN=$(echo $GIT_ORIGIN_URL | sed 's/\.git//g;s/github/raw.githubusercontent/g')/main/Team/Members.md
 rm -f /tmp/outMainUp
 rm -f /tmp/outMainOr
 wget -q $MEMBER_URL_UPSTREAM_MAIN -O /tmp/outMainUp

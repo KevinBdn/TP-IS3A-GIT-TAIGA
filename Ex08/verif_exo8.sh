@@ -18,10 +18,10 @@ ok()
 
 GIT_URL_OR=$(git remote get-url origin)
 GIT_URL_UP=$(cat README.md | grep -i "Git-url" | sed 's/.*(\(.*\))/\1/')
-MEMBER_URL_OR_MAIN=$(echo $GIT_URL_OR | sed 's/github/raw.githubusercontent/g')/main/Team/Members.md
-MEMBER_URL_OR_DEVEL=$(echo $GIT_URL_OR | sed 's/github/raw.githubusercontent/g')/devel/Team/Members.md
-MEMBER_URL_UP_MAIN=$(echo $GIT_URL_UP | sed 's/github/raw.githubusercontent/g')/main/Team/Members.md
-MEMBER_URL_UP_DEVEL=$(echo $GIT_URL_UP | sed 's/github/raw.githubusercontent/g')/devel/Team/Members.md
+MEMBER_URL_OR_MAIN=$(echo $GIT_URL_OR | sed 's/\.git//g;s/github/raw.githubusercontent/g')/main/Team/Members.md
+MEMBER_URL_OR_DEVEL=$(echo $GIT_URL_OR | sed 's/\.git//g;s/github/raw.githubusercontent/g')/devel/Team/Members.md
+MEMBER_URL_UP_MAIN=$(echo $GIT_URL_UP | sed 's/\.git//g;s/github/raw.githubusercontent/g')/main/Team/Members.md
+MEMBER_URL_UP_DEVEL=$(echo $GIT_URL_UP | sed 's/\.git//g;s/github/raw.githubusercontent/g')/devel/Team/Members.md
 
 rm -f /tmp/outMainOr
 rm -f /tmp/outDevelOr

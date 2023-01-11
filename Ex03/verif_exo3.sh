@@ -23,7 +23,7 @@ ok()
 if [[ $(git branch) == *"devel"* ]]
 then 
     GIT_ORIGIN_URL=$(git remote get-url origin)
-    MEMBER_URL=$(echo $GIT_ORIGIN_URL | sed 's/github/raw.githubusercontent/g')/devel/Team/Members.md
+    MEMBER_URL=$(echo $GIT_ORIGIN_URL | sed 's/\.git//g;s/github/raw.githubusercontent/g')/devel/Team/Members.md
     if !(test_url $MEMBER_URL)
     then
         echo $(ko) "La branche 'devel' n'est pas à jour sur le repo Github d'origine"
